@@ -1,6 +1,7 @@
 import { ThemeProvider, styled } from "styled-components";
 import {lightTheme} from "./utils/Themes";
 import {BrowserRouter} from "react-router-dom";
+import Authentication from "./pages/Authentication";
 
 const Container = styled.div`
 width: 100%;
@@ -17,7 +18,9 @@ function App() {
     <ThemeProvider theme={lightTheme}>
       <BrowserRouter>
       <Container>
-      </Container></BrowserRouter>
+        <Authentication />
+      </Container>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }
