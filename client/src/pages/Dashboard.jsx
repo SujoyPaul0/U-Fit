@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import { counts } from "../utils/data";
 import CountsCard from "../components/cards/CountsCard";
+import WeeklyStatCard from '../components/cards/WeaklyStatCard';
 
 const Container = styled.div`
   flex: 1;
@@ -45,10 +46,12 @@ const Dashboard = () => {
       <Title>Dashboard</Title>
       <FlexWrap>
         {counts.map((item) =>(
-          <CountsCard item={item} />))}
-        <div>Card</div>
-        <div>Card</div>
-        <div>Card</div>
+          <CountsCard item={item} />
+          ))}
+      </FlexWrap>
+
+      <FlexWrap>
+        <WeeklyStatCard data={data}/>
       </FlexWrap>
     </Wrapper>
   </Container>
